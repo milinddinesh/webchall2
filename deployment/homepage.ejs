@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            .input {
+                width : 500px;
+                height : 49px;
+            }
+            .button {
+                background-color : red;
+                border : none;
+                color : blue;
+                padding : 10px 32px;
+                text-align : center;
+                text-decoration : none;
+                display : inline-block;
+                font-size : 16px;
+                margin : 4px 2px;
+                cursor : pointer;
+            }
+            .button1 {
+                background-color : red;
+                color : blue;
+                border : 5px solid red;
+            }
+            .button1:hover {
+                background-color : blue;
+                color : red;
+                border : 5px solid blue;
+            }
+        </style>
+        <metacharset = "utf-8">
+        <meta name = "viewport" content = "width = device-width, height = device-height, initial-scale = 1.0">
+        <title>User_Home</title>
+    </head>
+    <body background = "/static/background.jpg">
+        <center>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <div style = 'background-color:black;'>
+                <% if (!check) { %>
+                    <font color = "green" size = "7"><b><i>Welcome <%= user %></i></b></font>
+                    <br>
+                    <font color = 'green' size = '5'><b><i>You are not an admin!!</i></b></font>
+                    <br>
+                    <br>
+                    <br>
+                    <form action = '/check_permissions' method = 'post'>
+                       
+                        
+                    </form>
+                    <br>
+                <% } else { %>
+                    <font color = "green" size = "5"><b><i>Congrats you are an admin</i></b></font>
+                    <br>
+                    <form action = '/pinger' method = 'post'>
+                        <font color = "green" size = "6"><b><i>Ping your server to know if it's still up:</i></b></font>
+                        <input type = "text" name = "ip" placeholder = "ip address" required>
+                        <input type = 'submit' class = 'button button1' value = 'ping'>
+                    </form>
+                <% } %>
+                </form>
+            </div>
+        </center>
+    </body>
+</html>

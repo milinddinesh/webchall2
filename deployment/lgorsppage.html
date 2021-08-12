@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<style>
+			.input {
+				width : 500px;
+				height : 49px;
+			}
+			.button {
+				background-color : red;
+				border : none;
+				color : blue;
+				padding : 10px 32px;
+				text-align : center;
+				text-decoration : none;
+				display : inline-block;
+				font-size : 16px;
+				margin : 4px 2px;
+				cursor : pointer;
+			}
+			.button1 {
+				background-color : red;
+				color : blue;
+				border : 5px solid red;
+			}
+			.button1:hover {
+				background-color : blue;
+				color : red;
+				border : 5px solid blue;
+			}
+		</style>
+		<metacharset = "utf-8">
+		<meta name = "viewport" content = "width = device-width, height = device-height, initial-scale = 1.0">
+		<title>Home</title>
+	</head>
+	<body background = "/static/background.jpg">
+		<center>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<div style = 'background-color:black;'>
+				<font color = "green" size = "7"><b><i>Welcome to the Homepage</i></b></font>
+				<table>
+					<tr>
+						<td>
+							<form action = '/login' method = 'GET'>
+								<input type = 'submit' class = 'button button1' value = 'Login'>
+							</form>
+						</td>
+						<td>
+							<form action = '/sign_up' method = 'GET'>
+								<input type = 'submit' class = 'button button1' value = 'Sign Up'>
+							</form>
+						</td>
+					</tr>
+				</table>
+			</div>
+		</center>
+	</body>
+</html>

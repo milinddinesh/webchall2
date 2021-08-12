@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<style>
+			.input {
+				width : 500px;
+				height : 49px;
+			}
+			.button {
+				background-color : red;
+				border : none;
+				color : blue;
+				padding : 10px 32px;
+				text-align : center;
+				text-decoration : none;
+				display : inline-block;
+				font-size : 16px;
+				margin : 4px 2px;
+				cursor : pointer;
+			}
+			.button1 {
+				background-color : red;
+				color : blue;
+				border : 5px solid red;
+			}
+			.button1:hover {
+				background-color : blue;
+				color : red;
+				border : 5px solid blue;
+			}
+		</style>
+		<metacharset = "utf-8">
+		<meta name = "viewport" content = "width = device-width, height = device-height, initial-scale = 1.0">
+		<title>Sign Up</title>
+	</head>
+	<body background = "/static/background.jpg">
+		<center>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<table bgcolor = 'black'>
+				<caption>
+					<font size = '6'><b><i>SignUp Form</i></b></font>
+				</caption>
+				<form action = '/signup_info' method = 'post'>
+					<tr>
+						<td align = 'center'>
+							<input type = 'text' class = 'input' name = 'username' placeholder = 'Enter Username' required>
+						</td>
+					</tr>
+					<tr>
+						<td align = 'center'>
+							<input type = 'password' class = 'input' name = 'password' placeholder = 'Enter Password' required>
+						</td>
+					</tr>
+					<tr>
+						<td align = 'center'>
+							<input type = 'password' class = 'input' name = 'check_password' placeholder = 'Re-Enter Password' required>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<font size = '4' color = 'green'><b><i>Note the username must not exceed 40 characters in length and the password must not exceed 20 characters in length</i></b></font>
+						</td>
+					</tr>
+					<tr>
+						<td align = 'center'>
+							<% if (check == 1) { %>
+								<font size = '4' color = 'red'><b><i>Wrong Username</i></b></font>
+							<% } else if (check == 2) { %>
+								<font size = '4' color = 'red'><b><i> Wrong Password</i></b></font>
+							<% } else if (check == 3) { %>
+								<font size = '4' color = 'red'><b><i>Password and retype password fields are not same</i></b></font>
+							<% } else if (check == 4) { %>
+								<font size = '4' color = 'red'><b><i>Username already exists</i></b></font>
+							<% } %>
+						</td>
+					</tr>
+					<tr>
+						<td align = 'center'>
+							<input type = 'submit' value = 'Submit' class = 'button button1'>
+						</td>
+					</tr>
+				</form>
+			</table>
+		</center>
+	</body>
+</html>
