@@ -1,13 +1,14 @@
 FROM ubuntu:latest
 ARG DEBIAN_FRONTEND=noninteractive
 
-RUN apt-get update && apt-get install -y node.js npm mysql-server nginx
+RUN apt-get update && apt-get install -y node.js npm mysql-server nginx iputils-ping
 
-COPY deployment/ /app
-COPY db.sql .
-COPY script.sh .
-COPY execute.sh .
-
+COPY deployment/ecorp /app
+RUN ls /app
+COPY deployment/script.sh .
+COPY deployment/execute.sh .
+COPY deployment/default /etc/nginx/sites-enabled/
+COPY deployment/flag.txt /root/
 
 EXPOSE 3306 
 RUN npm --prefix ./app install ./app

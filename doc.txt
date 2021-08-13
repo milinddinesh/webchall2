@@ -1,1 +1,0 @@
-challenge files are in /var/www/html/

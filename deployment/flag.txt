@@ -1,0 +1,1 @@
+flag{C0mm4nd_1nject1On_c4n_b_d34dly}
