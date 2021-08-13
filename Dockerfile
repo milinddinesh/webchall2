@@ -1,12 +1,13 @@
 FROM ubuntu:latest
 ARG DEBIAN_FRONTEND=noninteractive
 
-RUN apt-get update && apt-get install -y node.js npm mysql-server
+RUN apt-get update && apt-get install -y node.js npm mysql-server nginx
 
 COPY deployment/ /app
 COPY db.sql .
 COPY script.sh .
 COPY execute.sh .
+
 
 EXPOSE 3306 
 RUN npm --prefix ./app install ./app
