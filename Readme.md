@@ -3,7 +3,7 @@
 ### Challenge authors: 231tr0n, BluBerryPickle, retrymp3
 
 ## Challenge Description
-"Why do i have to log out anyway? It's just a ping servive ..."
+"Why do i have to log out anyway? It's just a ping service ..."
 
 ## Short Write-up
 Register account ->login
